@@ -13,6 +13,10 @@ export function clampRating(rating: number): number {
     return Math.min(5, Math.max(0, rating));
 }
 
+export function formatRatingOutOfFive(rating: number | null): string {
+    return rating === null ? 'No rating yet' : `${rating} / 5`;
+}
+
 /**
  * Builds a star glyph string for a rating between 0 and 5.
  *
